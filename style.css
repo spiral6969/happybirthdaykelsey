@@ -2,14 +2,22 @@ body, html {
   margin: 0;
   padding: 0;
   background: black;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container {
   position: relative;
   width: 1920px;
   height: 1080px;
-  margin: 0 auto;
-  overflow: hidden;
+  transform-origin: top left;
+  transform: scale(1);
 }
 
 #background {
@@ -20,7 +28,6 @@ body, html {
   z-index: 0;
 }
 
-/* Flames */
 .flame {
   position: absolute;
   width: 114px;
@@ -29,7 +36,6 @@ body, html {
   animation: flicker 0.3s infinite;
 }
 
-/* Envelope */
 #envelope {
   position: absolute;
   width: 150.6px;
@@ -40,7 +46,6 @@ body, html {
   cursor: pointer;
 }
 
-/* Card Front & Back */
 .card-container img {
   position: absolute;
   width: 686.4px;

@@ -1,7 +1,6 @@
 function openCard() {
   document.getElementById("envelope").style.display = "none";
   document.getElementById("card-front").classList.remove("hidden");
-
 }
 
 function flipCard() {
@@ -17,3 +16,15 @@ document.querySelectorAll('.flame').forEach(f => {
     setTimeout(() => f.style.display = "none", 500);
   });
 });
+
+// Auto scale to fit screen
+function scaleToFit() {
+  const scale = Math.min(
+    window.innerWidth / 1920,
+    window.innerHeight / 1080
+  );
+  document.querySelector('.container').style.transform = `scale(${scale})`;
+}
+
+window.addEventListener('resize', scaleToFit);
+window.addEventListener('load', scaleToFit);
