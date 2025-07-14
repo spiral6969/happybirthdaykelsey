@@ -1,0 +1,58 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.bg {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#full-bg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.flame {
+  position: absolute;
+  width: 114px;
+  height: 114px;
+  z-index: 2;
+  animation: flicker 0.3s infinite;
+}
+
+@keyframes flicker {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.05) rotate(-1deg); }
+  100% { transform: scale(1) rotate(1deg); }
+}
+
+#envelope {
+  position: absolute;
+  width: 150.6px;
+  height: 105px;
+  top: 837px;
+  left: 499px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.card-container img {
+  position: absolute;
+  width: 686.4px;
+  height: 1029.7px;
+  top: 20px;
+  left: 587px;
+  z-index: 4;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
