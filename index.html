@@ -5,18 +5,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="bg">
-    <img src="your-full-image.png" id="full-bg" alt="background">
+  <div class="container">
+    <img src="your-full-image.png" id="background" alt="background">
 
     <!-- Flames -->
     <img src="flame.gif" class="flame" style="top: 550px; left: 817px;">
     <img src="flame.gif" class="flame" style="top: 550px; left: 874px;">
 
-    <!-- Envelope (click to open) -->
+    <!-- Envelope -->
     <img src="envelope.png" id="envelope" onclick="openCard()">
 
-    <!-- Card -->
+    <!-- Birthday Card -->
     <div class="card-container">
       <img src="card-front.png" id="card-front" onclick="flipCard()" class="hidden">
       <img src="card-back.png" id="card-back" class="hidden">
     </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

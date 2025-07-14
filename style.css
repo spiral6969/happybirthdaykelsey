@@ -1,24 +1,26 @@
 body, html {
   margin: 0;
   padding: 0;
+  background: black;
+}
+
+.container {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  margin: 0 auto;
   overflow: hidden;
 }
 
-.bg {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-}
-
-#full-bg {
+#background {
   position: absolute;
-  width: 1920px;
-  height: 1080px;
-  top: 0;
-  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   z-index: 0;
 }
 
+/* Flames */
 .flame {
   position: absolute;
   width: 114px;
@@ -27,12 +29,7 @@ body, html {
   animation: flicker 0.3s infinite;
 }
 
-@keyframes flicker {
-  0% { transform: scale(1) rotate(0deg); }
-  50% { transform: scale(1.05) rotate(-1deg); }
-  100% { transform: scale(1) rotate(1deg); }
-}
-
+/* Envelope */
 #envelope {
   position: absolute;
   width: 150.6px;
@@ -43,6 +40,7 @@ body, html {
   cursor: pointer;
 }
 
+/* Card Front & Back */
 .card-container img {
   position: absolute;
   width: 686.4px;
@@ -50,10 +48,16 @@ body, html {
   top: 20px;
   left: 587px;
   z-index: 4;
-  transition: transform 0.6s;
   cursor: pointer;
+  transition: transform 0.6s ease;
 }
 
 .hidden {
   display: none;
+}
+
+@keyframes flicker {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05) rotate(-1deg); }
+  100% { transform: scale(1); }
 }
